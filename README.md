@@ -12,6 +12,8 @@ Olivia + Danny
 
 -y2k/fruiteger aero type shit
 
+<img width="718" height="399" alt="image" src="https://github.com/user-attachments/assets/321485c2-a72d-4e3b-9922-ba0b50a06afd" />
+
 <img width="640" height="426" alt="image" src="https://github.com/user-attachments/assets/cc21c7a6-8e73-4711-9bf1-e72f97ad2195" />
 
 -waves of enemies, shop inbetween waves
