@@ -1,21 +1,36 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed;
+    public int maxHealth;
     [SerializeField] private Rigidbody2D rb;
+
+    public TMP_Text hpText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        //hpText = GetComponent<hpText>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //text box adjustments
+        hpText.text = "Health:" + maxHealth;
+
+        //movement
+        //this stops the ball getting shoved around by the projectiles
         rb.linearVelocity = new Vector2(0,0);
 
+        //inputs
         if (Input.GetKey(KeyCode.W))
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
@@ -55,6 +70,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Movement()
     {
+
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        //player damage
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            maxHealth = maxHealth - 1;
+
+            if (maxHealth <= 0)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
 
     }
 }
