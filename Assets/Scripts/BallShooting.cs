@@ -6,6 +6,8 @@ public class BallShooting : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
 
+    private float timer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,12 @@ public class BallShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        timer += Time.deltaTime;
+
+        if (timer > 7)
+        {
+            Destroy(this);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
