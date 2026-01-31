@@ -13,6 +13,8 @@ public class MaskSwitching : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if input = key
+
         //red
         if (Input.GetKey(KeyCode.Alpha1))
         {
