@@ -94,7 +94,10 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, (270+180) / 2);
         } else
         {
-            transform.rotation = Quaternion.Euler(0, 0, totalAngle / angleCount);
+            if (angleCount > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, totalAngle / angleCount);
+            }
         }
 
         /*

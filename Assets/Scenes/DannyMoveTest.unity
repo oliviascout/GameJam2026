@@ -267,9 +267,10 @@ GameObject:
   - component: {fileID: 344154932}
   - component: {fileID: 344154931}
   - component: {fileID: 344154934}
+  - component: {fileID: 344154935}
   m_Layer: 0
   m_Name: AffectedHomingTest
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -365,7 +366,7 @@ Transform:
   m_GameObject: {fileID: 344154929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -384,6 +385,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+--- !u!58 &344154935
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344154929}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.2199999
 --- !u!1 &639675525
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +783,7 @@ Transform:
   m_GameObject: {fileID: 1181129869}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalPosition: {x: 3, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -831,6 +868,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7065706015939096335, guid: d16d02ef4cd0b224e89a207e3e5c40f5, type: 3}
       propertyPath: scoreTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8361447177095427311, guid: d16d02ef4cd0b224e89a207e3e5c40f5, type: 3}
+      propertyPath: mask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

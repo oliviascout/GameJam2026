@@ -101,4 +101,14 @@ public class AffectedHomingEnemy : MonoBehaviour
 
         //rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * modifier1 * speed;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+
+        Destroy(gameObject);
+    }
 }

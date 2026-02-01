@@ -20,4 +20,14 @@ public class SlowHomingEnemy : MonoBehaviour
         //transform.position += direction * speed * Time.deltaTime;
         rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * speed;
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+
+        Destroy(gameObject);
+    }
 }
