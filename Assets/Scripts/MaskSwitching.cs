@@ -48,21 +48,21 @@ public class MaskSwitching : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha5))
         {
             sr.color = new Color(0f, 0f, 1f, 1f);
-            mask = 5;
+            //mask = 5;
         }
 
         //purple
         if (Input.GetKey(KeyCode.Alpha6))
         {
             sr.color = new Color(0.75f, 0f, 1f, 1f);
-            mask = 6;
+            //mask = 6;
         }
 
         //white
         if (Input.GetKey(KeyCode.Alpha7))
         {
             sr.color = new Color(1f, 1f, 1f, 1f);
-            mask = 7;
+            //mask = 7;
         }
 
 

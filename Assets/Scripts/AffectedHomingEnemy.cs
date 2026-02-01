@@ -97,7 +97,7 @@ public class AffectedHomingEnemy : MonoBehaviour
             //rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * modifier1 * Mathf.Max(speed, heldSpeed - (float)0.01);
             //heldSpeed = rb.linearVelocity.magnitude;
         //}
-        print(rb.linearVelocity.magnitude);
+        //print(rb.linearVelocity.magnitude);
 
         //rb.linearVelocity = new Vector2(direction.x, direction.y).normalized * modifier1 * speed;
     }
@@ -109,6 +109,27 @@ public class AffectedHomingEnemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Destroy(gameObject);
+        print("any collision!");
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            print("collision with enemy!");
+            if (other.gameObject.GetComponent<SlowHomingEnemy>() != null)
+            {
+                print("slow enemy");
+                Destroy(gameObject);
+            } else
+            {
+                print("fast enemy");
+            }
+            
+        }
+
+        //Destroy(gameObject);
+    }
+
+    public float GetHeldSpeed()
+    {
+        return heldSpeed;
     }
 }
