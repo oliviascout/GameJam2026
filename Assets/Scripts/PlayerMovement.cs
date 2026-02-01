@@ -11,7 +11,14 @@ public class PlayerMovement : MonoBehaviour
     public int maxHealth;
     [SerializeField] private Rigidbody2D rb;
 
+    public float scoreTimer;
+
+    private float timer;
+
+    private float score = 0;
+
     public TMP_Text hpText;
+    public TMP_Text hsText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,7 +31,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         //text box adjustments
-        hpText.text = "Health:" + maxHealth;
+        hpText.text = "Health: " + maxHealth;
+        hsText.text = "High-Score: " + score;
 
         //movement
         //this stops the ball getting shoved around by the projectiles
@@ -63,6 +71,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) rb.AddForce(Vector3.down);
          
          */
+
+        if (Time.time - scoreTimer >= 1)
+        {
+            score = score + 1;
+            scoreTimer = Time.time;
+        }
+
+
+
 
 
     }

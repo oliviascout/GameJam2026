@@ -167,7 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  maxHealth: 3
   rb: {fileID: 6607911740367414779}
+  hpText: {fileID: 0}
+  hsText: {fileID: 0}
 --- !u!114 &8361447177095427311
 MonoBehaviour:
   m_ObjectHideFlags: 0
