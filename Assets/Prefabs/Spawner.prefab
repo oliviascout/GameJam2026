@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 2719828902549245422, guid: 305fb8f935842bd4dbb5f01c963b8d1f, type: 3}
   ballPos: {fileID: 7896775320030575015}
-  timeBtwnSpawn: 2
+  timeBtwnSpawn: 4
 --- !u!1 &7397023091422936829
 GameObject:
   m_ObjectHideFlags: 0

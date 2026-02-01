@@ -24,9 +24,9 @@ public class BallShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 7)
+        if (timer > 4)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 
