@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
         //text box adjustments
         hpText.text = "Health: " + maxHealth;
-        hsText.text = "High-Score: " + score;
+        hsText.text = "Score: " + score;
 
         //movement
         //this stops the ball getting shoved around by the projectiles
