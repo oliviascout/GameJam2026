@@ -28,7 +28,7 @@ public class AffectedHomingEnemy : MonoBehaviour
 
         // enemy will go away from player if mask 1 is equipped
         MaskSwitching maskdata = player.GetComponent<MaskSwitching>();
-        PlayerMovement2 playermove = player.GetComponent<PlayerMovement2>();
+        PlayerMovement playermove = player.GetComponent<PlayerMovement>();
 
         if ( maskdata.mask == 2)
         {

@@ -23,7 +23,7 @@ public class SceneChanger : MonoBehaviour
         //title screen is scene 0.
         //sample scene (our final scene maybe?) is scene 1.
         //scenes must be added manually to teh scene list via build profiles
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
 
     }
 }
